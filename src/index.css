@@ -1,0 +1,311 @@
+/* ================= GLOBAL ================= */
+
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  background:#f1f3f6;
+}
+
+/* ================= NAVBAR ================= */
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:#131921;
+  color:white;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+.navLinks a{
+  margin-left:20px;
+  color:white;
+  text-decoration:none;
+}
+
+.cartIcon{
+  position:relative;
+  font-size:22px;
+}
+
+.cartCount{
+  position:absolute;
+  top:-6px;
+  right:-10px;
+  background:red;
+  color:white;
+  font-size:12px;
+  padding:2px 6px;
+  border-radius:50%;
+}
+
+/* ================= HERO SLIDER ================= */
+
+.heroSlider{
+  height:350px;
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-shadow:0 3px 10px rgba(0,0,0,.6);
+  position:relative;
+}
+
+/* SLIDER ARROWS */
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:40px;
+  color:white;
+  cursor:pointer;
+  padding:10px;
+  background:rgba(0,0,0,.3);
+  border-radius:50%;
+  user-select:none;
+}
+
+.arrow.left{ left:20px }
+.arrow.right{ right:20px }
+
+/* DOTS */
+.dots{
+  position:absolute;
+  bottom:20px;
+  display:flex;
+  gap:8px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  background:white;
+  opacity:.5;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.dot.active{
+  opacity:1;
+  background:#ff9900;
+}
+
+.exploreBtn{
+  padding:14px 22px;
+  background:#131921;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:20px;
+  transition:.3s;
+}
+
+.exploreBtn:hover{
+  transform:scale(1.05);
+}
+
+/* ================= OFFER CARDS ================= */
+
+.offers{
+  display:flex;
+  gap:25px;
+  justify-content:center;
+  padding:40px;
+}
+
+.offerCard{
+  width:260px;
+  height:160px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:bold;
+  border-radius:12px;
+  background-size:cover;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.offerCard:hover{
+  transform:translateY(-8px) scale(1.05);
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.electronics{
+  background-image:url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+}
+
+.fashion{
+  background-image:url("https://images.unsplash.com/photo-1523381210434-271e8be1f52b");
+}
+
+.gadget{
+  background-image:url("https://images.unsplash.com/photo-1517336714731-489689fd1ca8");
+}
+
+/* ================= SEARCH BAR ================= */
+
+.searchBar{
+  text-align:center;
+  margin-top:20px;
+}
+
+.searchBar input{
+  width:320px;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+/* ================= PRODUCT GRID ================= */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  padding:30px;
+}
+
+/* ================= PRODUCT CARD ================= */
+
+.productCard{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+  text-align:center;
+  transition:.3s;
+}
+
+.productCard:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+.productCard img{
+  width:120px;
+  height:140px;
+  object-fit:contain;
+}
+
+.price{
+  font-weight:bold;
+  margin:10px 0;
+}
+
+.cardBtns{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+}
+
+.addBtn{
+  background:#ffd814;
+  border:none;
+  padding:8px 12px;
+  cursor:pointer;
+}
+
+.buyBtn{
+  background:#fb641b;
+  color:white;
+  border:none;
+  padding:8px 12px;
+  cursor:pointer;
+}
+
+/* ================= CART PAGE ================= */
+
+.cartPage{
+  max-width:900px;
+  margin:auto;
+  padding:40px;
+}
+
+.cartItem{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:white;
+  padding:15px;
+  margin-bottom:15px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.cartItem img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+}
+
+.cartInfo{
+  flex:1;
+  margin-left:15px;
+}
+
+.qtyBox{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:8px;
+}
+
+.qtyBox button{
+  width:30px;
+  height:30px;
+  border:none;
+  background:#ffd814;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.cartBtns{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.removeBtn{
+  background:#d9534f;
+  color:white;
+  border:none;
+  padding:8px 12px;
+  cursor:pointer;
+}
+
+.total{
+  text-align:right;
+  margin-top:20px;
+  font-size:20px;
+}
+
+/* ================= CHECKOUT ================= */
+
+.checkout{
+  text-align:center;
+  padding:40px;
+}
+
+.checkout input{
+  display:block;
+  margin:10px auto;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+.success{
+  text-align:center;
+  padding:60px;
+}
